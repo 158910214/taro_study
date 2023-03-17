@@ -1,0 +1,51 @@
+.index {
+  height: 100vh;
+  padding: 0 32px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.overflow-y {
+  overflow-y: auto;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.txt-right {
+  text-align: right;
+}
+
+.txt-left {
+  text-align: left;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.table-layout {
+  .txt-center;
+
+  wx-text:first-child {
+    .txt-left;
+    // flex: 0.7;
+  }
+
+  wx-text:last-child {
+    .txt-right;
+    // flex: 0.7;
+  }
+}
