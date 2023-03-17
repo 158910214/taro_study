@@ -5,8 +5,8 @@ import Router from "koa-router";
 // https://platform.openai.com/docs/api-reference/images
 
 const configuration = new Configuration({
-  organization: "org-IO5efXGRxBDgskaD9iL5YTX3",
-  apiKey: "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",
+  organization: "",
+  apiKey: "",
 });
 const openai = new OpenAIApi(configuration);
 
