@@ -91,7 +91,10 @@ const config = {
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
-    }
+    },
+    webpackChain(chain) {
+      chain.plugin('unocss').use(UnoCSS())
+    },
   },
   rn: {
     appName: 'taroDemo',

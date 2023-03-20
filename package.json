@@ -10,7 +10,7 @@
     "css": "less"
   },
   "scripts": {
-    "dev": " concurrently \"nr dev:weapp\" \"nr gptserver\"",
+    "dev": " concurrently \"nr dev:weapp\" \"nr nr dev:h5\"",
     "setProxy": "set http_proxy=http://127.0.0.1:7890 & set https_proxy=http://127.0.0.1:7890",
     "gptserver": "nr setProxy & cd server & node index.js",
     "build:weapp": "taro build --type weapp",
@@ -40,7 +40,6 @@
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
-    "@nutui/nutui-react": "^1.4.11",
     "@tarojs/components": "3.6.2",
     "@tarojs/helper": "3.6.2",
     "@tarojs/plugin-framework-react": "3.6.2",
@@ -62,6 +61,7 @@
     "react-router": "^6.9.0",
     "react-router-dom": "^6.9.0",
     "sass-loader": "^13.2.0",
+    "taro-ui": "^2.3.4",
     "unocss": "^0.50.6",
     "unocss-preset-weapp": "^0.5.1"
   },

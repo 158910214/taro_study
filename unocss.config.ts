@@ -1,4 +1,4 @@
-import presetWeapp from 'unocss-preset-weapp'
+import { presetWeapp } from 'unocss-preset-weapp'
 import { transformerClass } from 'unocss-preset-weapp/transformer'
 import { defineConfig } from 'unocss'
 

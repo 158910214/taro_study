@@ -1,6 +1,6 @@
 import { Component, PropsWithChildren } from 'react'
-import '@nutui/nutui-react/dist/style.css'
 import 'uno.css'
+// import '@nutui/nutui-react/dist/style.css'
 import './app.less'
 
 class App extends Component<PropsWithChildren> {

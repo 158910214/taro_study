@@ -9,6 +9,7 @@ specifiers:
   global-tunnel-ng: ^2.7.1
   koa: ^2.14.1
   koa-router: ^12.0.0
+  koa2-cors: ^2.0.6
   openai: ^3.2.1
   utils-lib-js: ^1.6.0
 
@@ -21,6 +22,7 @@ dependencies:
   global-tunnel-ng: registry.npmmirror.com/global-tunnel-ng/2.7.1
   koa: registry.npmmirror.com/koa/2.14.1
   koa-router: registry.npmmirror.com/koa-router/12.0.0
+  koa2-cors: registry.npmmirror.com/koa2-cors/2.0.6
   openai: registry.npmmirror.com/openai/3.2.1
   utils-lib-js: registry.npmmirror.com/utils-lib-js/1.6.0
 
@@ -883,6 +885,13 @@ packages:
       vary: registry.npmmirror.com/vary/1.1.2
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  registry.npmmirror.com/koa2-cors/2.0.6:
+    resolution: {integrity: sha512-JRCcSM4lamM+8kvKGDKlesYk2ASrmSTczDtGUnIadqMgnHU4Ct5Gw7Bxt3w3m6d6dy3WN0PU4oMP43HbddDEWg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/koa2-cors/-/koa2-cors-2.0.6.tgz}
+    name: koa2-cors
+    version: 2.0.6
+    engines: {node: '>= 7.6.0'}
     dev: false
 
   registry.npmmirror.com/lines-and-columns/1.2.4:

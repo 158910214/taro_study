@@ -1,69 +1,17 @@
 import Taro from '@tarojs/taro'
-import { View, Text } from '@tarojs/components'
+import { View, Button } from '@tarojs/components'
 import './index.less'
 
-const generateColumns = (length = 10, prefix = 'column-', props?: any) =>
-  Array.from({ length }).map((_, columnIndex) => ({
-    ...props,
-    key: `${prefix}${columnIndex}`,
-    dataKey: `${prefix}${columnIndex}`,
-    title: `C${columnIndex}`,
-    width: 150,
-  }))
-
-const generateData = (
-  columns: ReturnType<typeof generateColumns>,
-  length = 200,
-  prefix = 'row-'
-) =>
-  Array.from({ length }).map((_, rowIndex) => {
-    return columns.reduce(
-      (rowData, column, columnIndex) => {
-        rowData[column.dataKey] = ` R${rowIndex}-Col${columnIndex}`
-        return rowData
-      },
-      {
-        id: `${prefix}${rowIndex}`,
-        parentId: null,
-      }
-    )
-  })
-
-const columns = generateColumns(4)
-const data = generateData(columns, 1000)
-
-const TableHd = () => (
-  <View className='flex table-layout'>
-    {
-      columns.map(({ title, key }) => (<Text className='flex-1' key={key}>{title}</Text>))
-    }
-  </View>
-)
-
-const TableBd = () => (
-  <View className='flex-1 overflow-y'>
-    {
-      data.map(item => (
-        <View className='flex table-layout' key={item.id}>
-          {
-            columns.map(({ dataKey, key }) => (<Text className='flex-1' key={key}>{item[dataKey]}</Text>))
-          }
-        </View>
-      ))
-    }
-  </View>
-)
-
 const go2Todo = () => Taro.navigateTo({ url: '/pages/todo-list/index' })
-const go2chat = () => Taro.navigateTo({ url: '/pages/chat/index' })
+const go2Chat = () => Taro.navigateTo({ url: '/pages/chat/index' })
+const go2Table = () => Taro.navigateTo({ url: '/pages/table/index' })
+
 export default () => {
   return (
-    <View className='index flex-col'>
-      <View onClick={go2Todo}>go2Todo</View>
-      <View onClick={go2chat}>go 2 chat</View>
-      <TableHd />
-      <TableHd />
-      <TableBd />
-    </View >
+    <ul className='index flex-col px-32px text-32px'>
+      <li><Button className='mt-20px' onClick={go2Todo}>go2Todo</Button></li>
+      <li><Button className='mt-20px' onClick={go2Chat}>go2chat</Button></li>
+      <li><Button className='mt-20px' onClick={go2Table}>go2table</Button></li>
+    </ul >
   )
 }
