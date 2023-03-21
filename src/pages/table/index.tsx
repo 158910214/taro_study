@@ -1,35 +1,35 @@
-import { View, Text } from "@tarojs/components";
-import "./index.less";
+import { View, Text } from '@tarojs/components'
+import './index.less'
 
-const generateColumns = (length = 10, prefix = "column-", props?: any) =>
+const generateColumns = (length = 10, prefix = 'column-', props?: any) =>
   Array.from({ length }).map((_, columnIndex) => ({
     ...props,
     key: `${prefix}${columnIndex}`,
     dataKey: `${prefix}${columnIndex}`,
     title: `C${columnIndex}`,
-    width: 150,
-  }));
+    width: 150
+  }))
 
 const generateData = (
   columns: ReturnType<typeof generateColumns>,
   length = 200,
-  prefix = "row-"
+  prefix = 'row-'
 ) =>
   Array.from({ length }).map((_, rowIndex) => {
     return columns.reduce(
       (rowData, column, columnIndex) => {
-        rowData[column.dataKey] = ` R${rowIndex}-Col${columnIndex}`;
-        return rowData;
+        rowData[column.dataKey] = ` R${rowIndex}-Col${columnIndex}`
+        return rowData
       },
       {
         id: `${prefix}${rowIndex}`,
-        parentId: null,
+        parentId: null
       }
-    );
-  });
+    )
+  })
 
-const columns = generateColumns(4);
-const data = generateData(columns, 1000);
+const columns = generateColumns(4)
+const data = generateData(columns, 1000)
 
 const TableHd = () => (
   <View className='flex table-layout'>
@@ -39,7 +39,7 @@ const TableHd = () => (
       </Text>
     ))}
   </View>
-);
+)
 
 const TableBd = () => (
   <View className='flex-1 overflow-y'>
@@ -53,7 +53,7 @@ const TableBd = () => (
       </View>
     ))}
   </View>
-);
+)
 
 export default () => {
   return (
@@ -61,5 +61,5 @@ export default () => {
       <TableHd />
       <TableBd />
     </View>
-  );
-};
+  )
+}

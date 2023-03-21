@@ -7,16 +7,14 @@ export default defineConfig({
     presetWeapp({
       // h5兼容
       isH5: process.env.TARO_ENV === 'h5',
-      platform: 'taro',
-    }),
+      platform: 'taro'
+    })
   ],
   shortcuts: [
     {
       'border-base': 'border border-gray-500/10',
-      'center': 'flex justify-center items-center',
-    },
+      center: 'flex justify-center items-center'
+    }
   ],
-  transformers: [
-    transformerClass()
-  ]
+  transformers: [transformerClass()]
 })

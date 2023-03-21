@@ -4,12 +4,11 @@ import 'uno.css'
 import './app.less'
 
 class App extends Component<PropsWithChildren> {
+  componentDidMount() {}
 
-  componentDidMount() { }
+  componentDidShow() {}
 
-  componentDidShow() { }
-
-  componentDidHide() { }
+  componentDidHide() {}
 
   render() {
     // this.props.children 是将要会渲染的页面
