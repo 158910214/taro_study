@@ -1,5 +1,4 @@
-/* eslint-disable jsx-quotes */
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Taro from '@tarojs/taro'
 import { View, Input, Button, Image } from '@tarojs/components'
 
